@@ -11,15 +11,14 @@ import discordIcon from "@/public/discord-icon.svg";
 import gitbookIcon from "@/public/gitbook-icon.svg";
 import dextoolsIcon from "@/public/dextools-icon.svg";
 import human from "@/public/human.svg";
-import ellipse1 from "@/public/ellipse1.svg";
-import ellipse2 from "@/public/ellipse2.svg";
+import ellipse from "@/public/ellipse.svg";
 
 export default function Home() {
   const { data: session } = useSession();
   return (
     <section className="flex min-h-screen flex-col items-center px-8">
       <span className={baiJamjuree.className}>
-        <p className="text-[32px] sm:text-[54px] font-semibold text-center my-[40px] sm:my-[60px]">
+        <p className="text-[32px] sm:text-[54px] font-semibold text-center my-[40px]">
           ヤクザの遺産
         </p>
       </span>
@@ -119,39 +118,30 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="w-[352px] h-[428px] sm:w-[585px] sm:h-[656px] relative">
+        <div className="flex items-center justify-center">
           <Image
             src={human}
             alt="human"
-            className="object-contain z-10 bottom-0"
+            className="z-10 absolute bottom-0"
             priority
             quality={100}
-            fill
+            // fill
             sizes="100vw"
           />
           <Image
-            src={ellipse1}
-            alt="ellipse1"
-            className="object-contain -z-0"
+            src={ellipse}
+            alt="ellipse"
+            className="absolute bottom-0 -z-0"
             priority
             quality={100}
-            fill
-            sizes="100vw"
-          />
-          <Image
-            src={ellipse2}
-            alt="ellipse2"
-            className="object-contain -z-10"
-            priority
-            quality={100}
-            fill
+            // fill
             sizes="100vw"
           />
         </div>
 
         <div />
 
-        <div className="absolute right-0 bottom-[250px]">
+        <div className="absolute right-0 bottom-[200px] sm:bottom-[440px]">
           <span className={sunrise.className}>
             <p className="text-xl font-normal rotate-90">Whitepaper</p>
           </span>
