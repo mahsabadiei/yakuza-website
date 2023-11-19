@@ -9,4 +9,5 @@ export const authConfig: NextAuthOptions = {
       version: "2.0",
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET
 };
