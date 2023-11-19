@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { signIn, signOut, useSession } from "next-auth/react";
 import { baiJamjuree, sunrise } from "@/app/styles/fonts";
 import xIcon from "@/public/x-icon.svg";
 import youtubeIcon from "@/public/youtube-icon.svg";
@@ -13,6 +15,7 @@ import ellipse1 from "@/public/ellipse1.svg";
 import ellipse2 from "@/public/ellipse2.svg";
 
 export default function Home() {
+  const { data: session } = useSession();
   return (
     <section className="flex min-h-screen flex-col items-center px-8">
       <span className={baiJamjuree.className}>
@@ -22,16 +25,45 @@ export default function Home() {
       </span>
 
       <div className="flex flex-col md:flex-row min-w-[40vw] gap-4 justify-between rounded-[48px] border border-black dark:border-gray-gradient-light mb-4 px-6 py-4">
-        <div className="flex flex-col sm:flex-row items-center justify-center">
-          <Image src={xIcon} alt="x logo" priority />
-          <p className="text-base font-semibold leading-6 px-1">Connect X</p>
-        </div>
+        {!session && (
+          <>
+            <div className="flex flex-col sm:flex-row items-center justify-center">
+              <Image src={xIcon} alt="x logo" priority />
+              <p className="text-base font-semibold leading-6 px-1">
+                Connect X
+              </p>
+            </div>
 
-        <button className="px-7 py-2 rounded-[32px] bg-black dark:bg-white">
-          <p className="text-sm font-bold leading-[22px] text-white dark:text-black">
-            Connect
-          </p>
-        </button>
+            <button
+              onClick={() => signIn()}
+              className="px-7 py-2 rounded-[32px] bg-black dark:bg-white"
+            >
+              <p className="text-sm font-bold leading-[22px] text-white dark:text-black">
+                Connect
+              </p>
+            </button>
+          </>
+        )}
+
+        {session && (
+          <>
+            <div className="flex flex-col sm:flex-row items-center justify-center">
+              <Image src={xIcon} alt="x logo" priority />
+              <p className="text-base font-semibold leading-6 px-1">
+                {session.user?.name}
+              </p>
+            </div>
+
+            <button
+              onClick={() => signOut()}
+              className="px-7 py-2 rounded-[32px] bg-black dark:bg-white"
+            >
+              <p className="text-sm font-bold leading-[22px] text-white dark:text-black">
+                Disconnect
+              </p>
+            </button>
+          </>
+        )}
       </div>
 
       <div className="flex flex-col sm:flex-row w-full gap-10 items-center justify-between ">
