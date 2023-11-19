@@ -65,7 +65,7 @@ export default function Home() {
         )}
       </div>
 
-      <div className="flex flex-col sm:flex-row w-full gap-10 items-center justify-between ">
+      <div className="flex flex-col sm:flex-row w-full gap-10 items-center justify-between">
         <div className="flex flex-row sm:flex-col gap-6 items-center justify-center px-2 py-[10px] sm:py-7 rounded-[32px] bg-black">
           <Link
             href={""}
@@ -141,7 +141,7 @@ export default function Home() {
 
         <div />
 
-        <div className="absolute right-0 bottom-[200px] sm:bottom-[440px]">
+        <div className="absolute right-0 bottom-[200px] sm:bottom-[400px]">
           <span className={sunrise.className}>
             <p className="text-xl font-normal rotate-90">Whitepaper</p>
           </span>
