@@ -27,7 +27,12 @@ export default function Home() {
         {!session && (
           <>
             <div className="flex flex-row items-center justify-center">
-              <Image src={xIcon} alt="x logo" priority />
+              <Image
+                src={xIcon}
+                alt="x logo"
+                priority
+                className="invert dark:invert-0"
+              />
               <p className="text-xs sm:text-base font-semibold leading-6 px-1">
                 Connect X
               </p>
@@ -66,55 +71,51 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col sm:flex-row w-full gap-10 items-center justify-between">
-        <div className="flex flex-row sm:flex-col gap-6 items-center justify-center px-2 py-[10px] sm:py-7 rounded-[32px] bg-black">
-          <Link
-            href={""}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={xIcon} alt="xIcon" />
+        <div className="flex flex-row sm:flex-col gap-6 items-center justify-center px-2 py-[10px] sm:py-7 rounded-[32px]">
+          <Link href={""} target="_blank" rel="noopener noreferrer">
+            <Image src={xIcon} alt="xIcon" className="invert dark:invert-0" />
           </Link>
-          <Link
-            href={""}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={youtubeIcon} alt="youtubeIcon" />
+          <Link href={""} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={youtubeIcon}
+              alt="youtubeIcon"
+              className="invert dark:invert-0"
+            />
           </Link>
-          <Link
-            href={""}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={coinmarketcapIcon} alt="coinmarketcapIcon" />
+          <Link href={""} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={coinmarketcapIcon}
+              alt="coinmarketcapIcon"
+              className="invert dark:invert-0"
+            />
           </Link>
-          <Link
-            href={""}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={coingeckoIcon} alt="coingeckoIcon" />
+          <Link href={""} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={coingeckoIcon}
+              alt="coingeckoIcon"
+              className="invert dark:invert-0"
+            />
           </Link>
-          <Link
-            href={""}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={discordIcon} alt="discordIcon" />
+          <Link href={""} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={discordIcon}
+              alt="discordIcon"
+              className="invert dark:invert-0"
+            />
           </Link>
-          <Link
-            href={""}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={gitbookIcon} alt="gitbookIcon" />
+          <Link href={""} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={gitbookIcon}
+              alt="gitbookIcon"
+              className="invert dark:invert-0"
+            />
           </Link>
-          <Link
-            href={""}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={dextoolsIcon} alt="dextoolsIcon" />
+          <Link href={""} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={dextoolsIcon}
+              alt="dextoolsIcon"
+              className="invert dark:invert-0"
+            />
           </Link>
         </div>
 
