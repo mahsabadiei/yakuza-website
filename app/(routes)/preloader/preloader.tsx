@@ -10,7 +10,7 @@ export default function Preloader() {
     const interval = setInterval(() => {
       setIsLoading(false);
       clearInterval(interval);
-    }, 2000);
+    }, 10000);
   }, []);
 
   return isLoading ? (
