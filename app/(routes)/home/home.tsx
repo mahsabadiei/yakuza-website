@@ -12,8 +12,6 @@ import coingeckoIcon from "@/public/coingecko-icon.svg";
 import discordIcon from "@/public/discord-icon.svg";
 import gitbookIcon from "@/public/gitbook-icon.svg";
 import dextoolsIcon from "@/public/dextools-icon.svg";
-import human from "@/public/human.svg";
-import ellipse from "@/public/ellipse.svg";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -130,27 +128,6 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex items-center justify-center">
-            <Image
-              src={human}
-              alt="human"
-              className="z-10 absolute bottom-0"
-              priority
-              quality={100}
-              // fill
-              sizes="100vw"
-            />
-            <Image
-              src={ellipse}
-              alt="ellipse"
-              className="absolute bottom-0 -z-0"
-              priority
-              quality={100}
-              // fill
-              sizes="100vw"
-            />
-          </div>
-
           <div />
 
           <div className="absolute right-0 bottom-[200px] sm:bottom-[400px]">
@@ -159,6 +136,16 @@ export default function Home() {
             </span>
           </div>
         </div>
+
+        <video
+          autoPlay
+          loop
+          muted
+          className="fixed right-0 bottom-0 -z-10 object-cover"
+          style={{minWidth: "100%", minHeight: "100%"}}
+        >
+          <source src="./human-head.mp4" />
+        </video>
       </motion.section>
     </FramerMotionWrapper>
   );
