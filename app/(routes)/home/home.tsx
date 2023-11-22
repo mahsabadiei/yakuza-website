@@ -32,7 +32,7 @@ export default function Home() {
           </p>
         </span>
 
-        <div className="flex flex-row w-[358px] sm:w-[587px] gap-4 justify-between rounded-[48px] border border-black dark:border-gray-gradient-light mb-4 px-6 py-4">
+        <div className="flex flex-row w-[358px] sm:w-[587px] gap-4 justify-between rounded-[48px] border border-gray-gradient-light mb-4 px-6 py-4">
           {!session && (
             <>
               <div className="flex flex-row items-center justify-center">
@@ -40,7 +40,7 @@ export default function Home() {
                   src={xIcon}
                   alt="x logo"
                   priority
-                  className="invert dark:invert-0"
+                  // className="invert dark:invert-0"
                 />
                 <p className="text-xs sm:text-base font-semibold leading-6 px-1">
                   Connect X
@@ -49,9 +49,9 @@ export default function Home() {
 
               <button
                 onClick={() => signIn()}
-                className="px-7 py-2 rounded-[32px] bg-black dark:bg-white"
+                className="px-7 py-2 rounded-[32px] bg-white"
               >
-                <p className="text-xs sm:text-sm font-bold leading-[22px] text-white dark:text-black">
+                <p className="text-xs sm:text-sm font-bold leading-[22px] text-black">
                   Connect
                 </p>
               </button>
@@ -69,9 +69,9 @@ export default function Home() {
 
               <button
                 onClick={() => signOut()}
-                className="px-7 py-2 rounded-[32px] bg-black dark:bg-white"
+                className="px-7 py-2 rounded-[32px] bg-white"
               >
-                <p className="text-xs sm:text-sm font-bold leading-[22px] text-white dark:text-black">
+                <p className="text-xs sm:text-sm font-bold leading-[22px] text-black">
                   Disconnect
                 </p>
               </button>
@@ -82,48 +82,52 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row w-full gap-10 items-center justify-between">
           <div className="flex flex-row sm:flex-col gap-6 items-center justify-center px-2 py-[10px] sm:py-7 rounded-[32px]">
             <Link href={""} target="_blank" rel="noopener noreferrer">
-              <Image src={xIcon} alt="xIcon" className="invert dark:invert-0" />
+              <Image
+                src={xIcon}
+                alt="xIcon"
+                //  className="invert dark:invert-0"
+              />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={youtubeIcon}
                 alt="youtubeIcon"
-                className="invert dark:invert-0"
+                // className="invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={coinmarketcapIcon}
                 alt="coinmarketcapIcon"
-                className="invert dark:invert-0"
+                // className="invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={coingeckoIcon}
                 alt="coingeckoIcon"
-                className="invert dark:invert-0"
+                // className="invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={discordIcon}
                 alt="discordIcon"
-                className="invert dark:invert-0"
+                // className="invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={gitbookIcon}
                 alt="gitbookIcon"
-                className="invert dark:invert-0"
+                // className="invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={dextoolsIcon}
                 alt="dextoolsIcon"
-                className="invert dark:invert-0"
+                // className="invert dark:invert-0"
               />
             </Link>
           </div>
@@ -141,8 +145,7 @@ export default function Home() {
           autoPlay
           loop
           muted
-          className="fixed right-0 bottom-0 -z-10 object-cover"
-          style={{minWidth: "100%", minHeight: "100%"}}
+          className="object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
         >
           <source src="./human-head.mp4" />
         </video>
