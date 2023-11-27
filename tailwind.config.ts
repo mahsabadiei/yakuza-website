@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         "gray-gradient-light": "rgba(255, 255, 255, 0.2)",
+        "gray-gradient-medium": "rgba(255, 255, 255, 0.10)",
       },
     },
   },

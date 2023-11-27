@@ -1,10 +1,14 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { motion, useIsPresent } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { baiJamjuree, sunrise } from "@/app/styles/fonts";
+import logo from "@/public/yakuza-logo.svg";
+import unmuteIcon from "@/public/unmute-icon.svg";
+import muteIcon from "@/public/mute-icon.svg";
 import xIcon from "@/public/x-icon.svg";
 import youtubeIcon from "@/public/youtube-icon.svg";
 import coinmarketcapIcon from "@/public/coinmarketcap-icon.svg";
@@ -14,6 +18,8 @@ import gitbookIcon from "@/public/gitbook-icon.svg";
 import dextoolsIcon from "@/public/dextools-icon.svg";
 
 export default function Home() {
+  const [mute, setMute] = useState(true);
+  const [audio, setAudio] = useState(new Audio("./Yakuza.mp3"));
   const { data: session } = useSession();
   const isPresent = useIsPresent();
 
@@ -26,11 +32,25 @@ export default function Home() {
         exit={{ opacity: 1, transition: { duration: 0.7, ease: "circIn" } }}
         style={{ opacity: isPresent ? 1 : 0 }}
       >
-        <span className={baiJamjuree.className}>
-          <p className="text-[32px] sm:text-[54px] font-semibold text-center my-[40px]">
-            ヤクザの遺産
-          </p>
-        </span>
+        <div className="flex flex-row w-full gap-2 justify-between items-center">
+          <Image src={logo} alt="logo" />
+
+          <span className={baiJamjuree.className}>
+            <p className="text-[32px] sm:text-[54px] font-semibold text-center my-[40px]">
+              ヤクザの遺産
+            </p>
+          </span>
+
+          <button
+            className="rounded-[48px] p-4 bg-gray-gradient-medium"
+            onClick={() => {
+              setMute(!mute);
+              mute ? audio.play() : audio.pause();
+            }}
+          >
+            <Image src={mute ? unmuteIcon : muteIcon} alt="unmuteIcon" />
+          </button>
+        </div>
 
         <div className="flex flex-row w-[358px] sm:w-[587px] gap-4 justify-between rounded-[48px] border border-gray-gradient-light mb-4 px-6 py-4">
           {!session && (
@@ -149,6 +169,10 @@ export default function Home() {
         >
           <source src="./human-head.mp4" />
         </video>
+
+        {/* <audio autoPlay loop>
+          <source src="./Yakuza.mp3" type="audio/mp3" />
+        </audio> */}
       </motion.section>
     </FramerMotionWrapper>
   );

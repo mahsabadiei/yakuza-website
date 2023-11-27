@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./preloader.module.scss";
 import Home from "../home/home";
+import styles from "./preloader.module.scss";
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,7 +10,7 @@ export default function Preloader() {
     const interval = setInterval(() => {
       setIsLoading(false);
       clearInterval(interval);
-    }, 10000);
+    }, 5000);
   }, []);
 
   return isLoading ? (
