@@ -8,8 +8,6 @@ export const FramerMotionWrapper = ({
   children: React.ReactNode;
 }) => (
   <>
-    <AnimatePresence>
-      <motion.div>{children}</motion.div>
-    </AnimatePresence>
+    <AnimatePresence>{children}</AnimatePresence>
   </>
 );

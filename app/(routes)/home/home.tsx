@@ -169,10 +169,6 @@ export default function Home() {
         >
           <source src="./human-head.mp4" />
         </video>
-
-        {/* <audio autoPlay loop>
-          <source src="./Yakuza.mp3" type="audio/mp3" />
-        </audio> */}
       </motion.section>
     </FramerMotionWrapper>
   );
