@@ -257,7 +257,7 @@ export default function Home() {
         </video> */}
 
         <MuxVideo
-          className="object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 "
           playbackId="mXWKSxoPGHy402s01rzJkZIQbkzwSV1b3qLwwJlmRBsFQ"
           metadata={{
             video_id: "video-id-123456",
@@ -266,7 +266,8 @@ export default function Home() {
           }}
           streamType="on-demand"
           minResolution="1080p"
-          autoPlay
+          controls
+          // autoPlay
           loop
           muted
         />
