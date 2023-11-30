@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #fff;
-  --background: #000;
-  --gray-gradient-light: rgba(255, 255, 255, 0.2);
+  --foreground: #000;
+  --background: #fff;
 }
 
 @media (prefers-color-scheme: dark) {

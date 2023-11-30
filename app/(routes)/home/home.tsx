@@ -48,7 +48,7 @@ export default function Home() {
             <span className={baiJamjuree.className}>
               <p className="text-[54px] font-semibold text-center">ヤク</p>
             </span>
-            <div className="flex flex-row w-[440px] h-[45px] items-center justify-between gap-4 pr-2.5 pl-[18px] py-2 rounded-[48px] border border-gray-gradient-0.2">
+            <div className="flex flex-row w-[440px] h-[45px] items-center justify-between gap-4 pr-2.5 pl-[18px] py-2 rounded-[48px] border border-black-gradient-0.3 dark:border-gray-gradient-0.2">
               {!session && (
                 <>
                   <div className="flex flex-row items-center justify-center">
@@ -56,8 +56,7 @@ export default function Home() {
                       src={xIcon}
                       alt="xIcon"
                       priority
-                      // className="invert dark:invert-0"
-                      className="w-[15px] h-[15px]"
+                      className="w-[15px] h-[15px] invert dark:invert-0"
                     />
                     <p className="text-xs font-semibold leading-[18px] px-1">
                       Connect X
@@ -66,9 +65,9 @@ export default function Home() {
 
                   <button
                     onClick={() => signIn()}
-                    className="flex w-[84px] h-[29px] justify-center items-center px-5 py-1.5 rounded-3xl bg-white hover:bg-gray-light"
+                    className="flex w-[84px] h-[29px] justify-center items-center px-5 py-1.5 rounded-3xl bg-black dark:bg-white hover:bg-gray-light"
                   >
-                    <p className="text-xs font-bold leading-4 text-black">
+                    <p className="text-xs font-bold leading-4 text-white dark:text-black">
                       Connect
                     </p>
                   </button>
@@ -82,7 +81,7 @@ export default function Home() {
                       src={xIcon}
                       alt="xIcon"
                       priority
-                      className="w-[15px] h-[15px]"
+                      className="w-[15px] h-[15px] invert dark:invert-0"
                     />
                     <p className="text-xs font-semibold leading-[18px] px-1">
                       {session.user?.name}
@@ -91,9 +90,9 @@ export default function Home() {
 
                   <button
                     onClick={() => signOut()}
-                    className="flex w-[84px] h-[29px] justify-center items-center px-5 py-1.5 rounded-3xl bg-white hover:bg-gray-light"
+                    className="flex w-[84px] h-[29px] justify-center items-center px-5 py-1.5 rounded-3xl bg-black dark:bg-white hover:bg-gray-light"
                   >
-                    <p className="text-xs font-bold leading-4 text-black">
+                    <p className="text-xs font-bold leading-4 text-white dark:text-black">
                       Disconnect
                     </p>
                   </button>
@@ -103,13 +102,17 @@ export default function Home() {
           </div>
 
           <button
-            className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] p-[14px] sm:p-[18px] rounded-[48px] bg-gray-gradient-0.1 hover:border hover:border-gray-gradient-0.3"
+            className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] p-[14px] sm:p-[18px] rounded-[48px] bg-black-gradient-0.5 dark:bg-gray-gradient-0.1 hover:border hover:border-gray-gradient-0.3"
             onClick={() => {
               setMute(!mute);
               mute ? audio.play() : audio.pause();
             }}
           >
-            <Image src={mute ? unmuteIcon : muteIcon} alt="unmuteIcon" />
+            <Image
+              src={mute ? unmuteIcon : muteIcon}
+              alt="unmuteIcon"
+              className="invert dark:invert-0"
+            />
           </button>
         </div>
 
@@ -117,7 +120,7 @@ export default function Home() {
           <span className={baiJamjuree.className}>
             <p className="text-[32px] font-semibold text-center">ヤク</p>
           </span>
-          <div className="flex flex-row w-[358px] h-[56px] items-center justify-between gap-4 pr-4 pl-6 py-4 rounded-[48px] border border-gray-gradient-0.2">
+          <div className="flex flex-row w-[358px] h-[56px] items-center justify-between gap-4 pr-4 pl-6 py-4 rounded-[48px] border border-black-gradient-0.3 dark:border-gray-gradient-0.2">
             {!session && (
               <>
                 <div className="flex flex-row items-center justify-center">
@@ -125,8 +128,7 @@ export default function Home() {
                     src={xIcon}
                     alt="xIcon"
                     priority
-                    // className="invert dark:invert-0"
-                    className="w-[20px] h-[20px]"
+                    className="w-[20px] h-[20px] invert dark:invert-0"
                   />
                   <p className="text-xs font-semibold leading-6 px-1">
                     Connect X
@@ -135,9 +137,9 @@ export default function Home() {
 
                 <button
                   onClick={() => signIn()}
-                  className="flex w-[99px] h-[34px] justify-center items-center px-6 py-1.5 rounded-[32px] bg-white hover:bg-gray-light"
+                  className="flex w-[99px] h-[34px] justify-center items-center px-6 py-1.5 rounded-[32px] bg-black dark:bg-white hover:bg-gray-light"
                 >
-                  <p className="text-xs font-bold leading-[22px] text-black">
+                  <p className="text-xs font-bold leading-[22px] text-white dark:text-black">
                     Connect
                   </p>
                 </button>
@@ -151,7 +153,7 @@ export default function Home() {
                     src={xIcon}
                     alt="xIcon"
                     priority
-                    className="w-[20px] h-[20px]"
+                    className="w-[20px] h-[20px] invert dark:invert-0"
                   />
                   <p className="text-xs font-semibold leading-6 px-1">
                     {session.user?.name}
@@ -160,9 +162,9 @@ export default function Home() {
 
                 <button
                   onClick={() => signOut()}
-                  className="flex w-[99px] h-[34px] justify-center items-center px-6 py-1.5 rounded-[32px] bg-white hover:bg-gray-light"
+                  className="flex w-[99px] h-[34px] justify-center items-center px-6 py-1.5 rounded-[32px] bg-black dark:bg-white hover:bg-gray-light"
                 >
-                  <p className="text-xs font-bold leading-[22px] text-black">
+                  <p className="text-xs font-bold leading-[22px] text-white dark:text-black">
                     Disconnect
                   </p>
                 </button>
@@ -177,56 +179,49 @@ export default function Home() {
               <Image
                 src={xIcon}
                 alt="xIcon"
-                // className="invert dark:invert-0"
-                className="opacity-70 hover:opacity-100"
+                className="opacity-70 hover:opacity-100 invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={youtubeIcon}
                 alt="youtubeIcon"
-                // className="invert dark:invert-0"
-                className="opacity-70 hover:opacity-100"
+                className="opacity-70 hover:opacity-100 invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={coinmarketcapIcon}
                 alt="coinmarketcapIcon"
-                // className="invert dark:invert-0"
-                className="opacity-70 hover:opacity-100"
+                className="opacity-70 hover:opacity-100 invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={coingeckoIcon}
                 alt="coingeckoIcon"
-                // className="invert dark:invert-0"
-                className="opacity-70 hover:opacity-100"
+                className="opacity-70 hover:opacity-100 invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={discordIcon}
                 alt="discordIcon"
-                // className="invert dark:invert-0"
-                className="opacity-70 hover:opacity-100"
+                className="opacity-70 hover:opacity-100 invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={gitbookIcon}
                 alt="gitbookIcon"
-                // className="invert dark:invert-0"
-                className="opacity-70 hover:opacity-100"
+                className="opacity-70 hover:opacity-100 invert dark:invert-0"
               />
             </Link>
             <Link href={""} target="_blank" rel="noopener noreferrer">
               <Image
                 src={dextoolsIcon}
                 alt="dextoolsIcon"
-                // className="invert dark:invert-0"
-                className="opacity-70 hover:opacity-100"
+                className="opacity-70 hover:opacity-100 invert dark:invert-0"
               />
             </Link>
           </div>
@@ -247,17 +242,27 @@ export default function Home() {
           </span>
         </div>
 
-        {/* <video
+        <video
           autoPlay
           loop
           muted
-          className="object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="hidden dark:flex object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
         >
           <source src="./human-head.mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
 
-        <MuxVideo
+        <video
+          autoPlay
+          loop
+          muted
+          className="flex dark:hidden object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
+        >
+          <source src="./human-head-light.mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* <MuxVideo
           className="hidden sm:flex object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
           playbackId="mXWKSxoPGHy402s01rzJkZIQbkzwSV1b3qLwwJlmRBsFQ"
           metadata={{
@@ -270,7 +275,7 @@ export default function Home() {
           autoPlay
           loop
           muted
-        />
+        /> */}
 
         <Image
           src={humanHeadMobile}
