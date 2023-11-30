@@ -1,15 +1,15 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="arcticons:coingecko" clip-path="url(#clip0_47_1125)">
-<path id="Vector" d="M12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75Z" stroke="white" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M3.52551 18.614C5.78501 13.9345 4.43951 7.8785 8.08401 6.925C11.7285 5.9715 14.112 7.598 16.019 8.159C17.926 8.72 19.508 9.017 19.86 10.794C20.3645 13.3465 12.065 17.855 13.832 22.75" stroke="white" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_3" d="M12.1775 13.486C13.7755 14.7475 15.4255 14.3285 19.0755 12.7995M14.9245 7.7685C14.9245 6.632 12.8505 5.7195 11.565 6.729" stroke="white" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_4" d="M10.5235 11.215C11.437 11.215 12.1775 10.4745 12.1775 9.561C12.1775 8.64752 11.437 7.907 10.5235 7.907C9.61003 7.907 8.86951 8.64752 8.86951 9.561C8.86951 10.4745 9.61003 11.215 10.5235 11.215Z" stroke="white" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_5" d="M10.5235 10.206C10.8797 10.206 11.1685 9.91722 11.1685 9.561C11.1685 9.20478 10.8797 8.916 10.5235 8.916C10.1673 8.916 9.87848 9.20478 9.87848 9.561C9.87848 9.91722 10.1673 10.206 10.5235 10.206Z" stroke="white" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_6" d="M17.4205 11.883C17.6345 11.883 17.808 11.7095 17.808 11.4955C17.808 11.2815 17.6345 11.108 17.4205 11.108C17.2065 11.108 17.033 11.2815 17.033 11.4955C17.033 11.7095 17.2065 11.883 17.4205 11.883Z" fill="white" fill-opacity="0.8"/>
-<path id="Vector_7" d="M21.1875 11.495C21.0629 9.23486 20.1096 7.09993 18.51 5.49842C16.9103 3.89691 14.7765 2.94119 12.5165 2.814" stroke="white" stroke-opacity="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="arcticons:coingecko" clip-path="url(#clip0_314_1157)">
+<path id="Vector" d="M12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M3.5255 18.614C5.785 13.9345 4.4395 7.8785 8.084 6.925C11.7285 5.9715 14.112 7.598 16.019 8.159C17.926 8.72 19.508 9.017 19.86 10.794C20.3645 13.3465 12.065 17.855 13.832 22.75" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M12.1775 13.486C13.7755 14.7475 15.4255 14.3285 19.0755 12.7995M14.9245 7.7685C14.9245 6.632 12.8505 5.7195 11.565 6.729" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M10.5235 11.215C11.437 11.215 12.1775 10.4745 12.1775 9.561C12.1775 8.64752 11.437 7.907 10.5235 7.907C9.61002 7.907 8.8695 8.64752 8.8695 9.561C8.8695 10.4745 9.61002 11.215 10.5235 11.215Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M10.5235 10.206C10.8797 10.206 11.1685 9.91722 11.1685 9.561C11.1685 9.20478 10.8797 8.916 10.5235 8.916C10.1673 8.916 9.8785 9.20478 9.8785 9.561C9.8785 9.91722 10.1673 10.206 10.5235 10.206Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M17.4205 11.883C17.6345 11.883 17.808 11.7095 17.808 11.4955C17.808 11.2815 17.6345 11.108 17.4205 11.108C17.2065 11.108 17.033 11.2815 17.033 11.4955C17.033 11.7095 17.2065 11.883 17.4205 11.883Z" fill="white"/>
+<path id="Vector_7" d="M21.1875 11.495C21.0629 9.23486 20.1097 7.09993 18.51 5.49842C16.9103 3.89691 14.7765 2.94119 12.5165 2.814" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="clip0_47_1125">
+<clipPath id="clip0_314_1157">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
 </defs>

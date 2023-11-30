@@ -1,57 +1,12 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Home from "../home/home";
-
-const Torus = ({ position, args, color }: any) => {
-  const ref = useRef();
-  const [isHovered, setIsHovered] = useState(false);
-
-  useFrame((state, delta, frame) => {
-    //@ts-ignore
-    // ref.current.rotation.y += delta * 0.2;
-    const speed = isHovered ? 4 : 0.2;
-    //@ts-ignore
-    ref.current.rotation.y += delta * speed;
-  });
-
-  return (
-    <mesh
-      ref={ref as any}
-      position={position}
-      onPointerEnter={(event) => (event.stopPropagation(), setIsHovered(true))}
-      onPointerLeave={() => setIsHovered(false)}
-    >
-      <torusGeometry args={args} />
-      <meshStandardMaterial color={isHovered ? "white" : "red"} wireframe />
-    </mesh>
-  );
-};
-
-const Scene = () => {
-  const directionalLightRef = useRef();
-
-  return (
-    <>
-      <directionalLight
-        position={[0, 1, 2]}
-        intensity={0.5}
-        //@ts-ignore
-        ref={directionalLightRef}
-        color={"white"}
-      />
-      <ambientLight intensity={0.5} />
-      {/* <Torus args={[0.1, 1000, 50, 5]} position={[0, 0, 0]} color="red" /> */}
-      <Torus args={[0.6, 0.1, 30, 30]} position={[-0.3, 0, 0]} color="red" />
-      <Torus args={[0.6, 0.1, 30, 30]} position={[0.3, 0, 0]} color="red" />
-      <Torus args={[0.6, 0.1, 30, 30]} position={[0, 0.7, 0]} color="red" />
-      <Torus args={[0.1, 0.05, 30, 30]} position={[0, 1.5, 0]} color="red" />
-    </>
-  );
-};
+import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIsLoading(false);
@@ -60,11 +15,95 @@ export default function Preloader() {
   }, []);
 
   return isLoading ? (
-    <section className="w-full h-[900px]">
-      <Canvas>
-        <Scene />
-      </Canvas>
-    </section>
+    <FramerMotionWrapper>
+      <section className="flex flex-col w-full min-h-screen justify-center items-center">
+        <motion.div
+          className="w-[36px] h-[36px] border-[5.5px] border-red rounded-full"
+          initial={{ y: -100 }}
+          variants={{
+            start: {
+              opacity: [0, 1],
+              x: 0,
+              y: 360,
+              transition: { duration: 5, delay: 2 },
+            },
+            end: {
+              scale: 20,
+              transition: { duration: 3, delay: 8 },
+            },
+          }}
+          animate={["start", "end"]}
+        />
+        <section className="flex flex-row w-full min-h-screen gap-[128px] justify-center items-center">
+          <motion.div
+            className="min-w-[74px] min-h-[74px] border-[5.5px] border-red rounded-full"
+            variants={{
+              start: {
+                x: 180,
+                y: 0,
+                transition: { duration: 2 },
+              },
+              end: {
+                opacity: [1, 0],
+                transition: { duration: 1, delay: 7 },
+              },
+            }}
+            animate={["start", "end"]}
+          />
+          <motion.div
+            className="min-w-[74px] min-h-[74px] border-[5.5px] border-red rounded-full"
+            variants={{
+              start: {
+                x: 0,
+                y: -40,
+                transition: { duration: 2 },
+              },
+              end: {
+                opacity: [1, 0],
+                transition: { duration: 1, delay: 7 },
+              },
+            }}
+            animate={["start", "end"]}
+          />
+          <motion.div
+            className="min-w-[74px] min-h-[74px] border-[5.5px] border-red rounded-full"
+            variants={{
+              start: {
+                x: -180,
+                y: 0,
+                transition: { duration: 2 },
+              },
+              end: {
+                opacity: [1, 0],
+                transition: { duration: 1, delay: 7 },
+              },
+            }}
+            animate={["start", "end"]}
+          />
+        </section>
+        <motion.div
+          className="flex flex-col items-center"
+          initial={{ y: 0 }}
+          variants={{
+            start: {
+              opacity: [0, 1],
+              x: 0,
+              y: -380,
+              transition: { duration: 5, delay: 2 },
+            },
+            end: {
+              opacity: [1, 0],
+              transition: { duration: 1, delay: 7 },
+            },
+          }}
+          animate={["start", "end"]}
+        >
+          <p className="text-2xl font-extralight">Y</p>
+          <p className="text-2xl font-extralight">A</p>
+          <p className="text-2xl font-extralight">K</p>
+        </motion.div>
+      </section>
+    </FramerMotionWrapper>
   ) : (
     <Home />
   );
