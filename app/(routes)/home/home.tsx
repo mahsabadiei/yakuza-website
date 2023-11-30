@@ -65,9 +65,9 @@ export default function Home() {
 
                   <button
                     onClick={() => signIn()}
-                    className="w-[84px] h-[29px] px-5 py-1.5 rounded-3xl bg-white hover:bg-gray-light"
+                    className="flex w-[84px] h-[29px] justify-center items-center px-5 py-1.5 rounded-3xl bg-white hover:bg-gray-light"
                   >
-                    <p className="text-[10px] font-bold leading-4 text-black">
+                    <p className="text-xs font-bold leading-4 text-black">
                       Connect
                     </p>
                   </button>
@@ -90,9 +90,9 @@ export default function Home() {
 
                   <button
                     onClick={() => signOut()}
-                    className="w-[84px] h-[29px] px-5 py-1.5 rounded-3xl bg-white hover:bg-gray-light"
+                    className="flex w-[84px] h-[29px] justify-center items-center px-5 py-1.5 rounded-3xl bg-white hover:bg-gray-light"
                   >
-                    <p className="text-[10px] font-bold leading-4 text-black">
+                    <p className="text-xs font-bold leading-4 text-black">
                       Disconnect
                     </p>
                   </button>
@@ -134,7 +134,7 @@ export default function Home() {
 
                 <button
                   onClick={() => signIn()}
-                  className="w-[99px] h-[34px] px-6 py-1.5 rounded-[32px] bg-white hover:bg-gray-light"
+                  className="flex w-[99px] h-[34px] justify-center items-center px-6 py-1.5 rounded-[32px] bg-white hover:bg-gray-light"
                 >
                   <p className="text-xs font-bold leading-[22px] text-black">
                     Connect
@@ -159,7 +159,7 @@ export default function Home() {
 
                 <button
                   onClick={() => signOut()}
-                  className="w-[99px] h-[34px] px-6 py-1.5 rounded-[32px] bg-white hover:bg-gray-light"
+                  className="flex w-[99px] h-[34px] justify-center items-center px-6 py-1.5 rounded-[32px] bg-white hover:bg-gray-light"
                 >
                   <p className="text-xs font-bold leading-[22px] text-black">
                     Disconnect
@@ -265,6 +265,7 @@ export default function Home() {
             viewer_user_id: "user-id-bc-789",
           }}
           streamType="on-demand"
+          minResolution="1080p"
           autoPlay
           loop
           muted
