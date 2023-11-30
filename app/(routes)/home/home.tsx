@@ -17,6 +17,7 @@ import coingeckoIcon from "@/public/coingecko-icon.svg";
 import discordIcon from "@/public/discord-icon.svg";
 import gitbookIcon from "@/public/gitbook-icon.svg";
 import dextoolsIcon from "@/public/dextools-icon.svg";
+import humanHeadMobile from "@/public/human-head-mobile.webp";
 
 export default function Home() {
   const [mute, setMute] = useState(true);
@@ -257,7 +258,7 @@ export default function Home() {
         </video> */}
 
         <MuxVideo
-          className="object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="hidden sm:flex object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
           playbackId="mXWKSxoPGHy402s01rzJkZIQbkzwSV1b3qLwwJlmRBsFQ"
           metadata={{
             video_id: "video-id-123456",
@@ -269,6 +270,15 @@ export default function Home() {
           autoPlay
           loop
           muted
+        />
+
+        <Image
+          src={humanHeadMobile}
+          alt="humanHeadMobile"
+          className="flex sm:hidden object-cover fixed right-0 bottom-0 -z-10"
+          priority
+          quality={100}
+          sizes="100vw"
         />
       </motion.section>
     </FramerMotionWrapper>
