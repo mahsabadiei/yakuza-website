@@ -24,7 +24,7 @@ export default function Preloader() {
             start: {
               opacity: [0, 1],
               x: 0,
-              y: 360,
+              y: 300,
               transition: { duration: 5, delay: 2 },
             },
             end: {
@@ -88,7 +88,7 @@ export default function Preloader() {
             start: {
               opacity: [0, 1],
               x: 0,
-              y: -380,
+              y: -300,
               transition: { duration: 5, delay: 2 },
             },
             end: {
