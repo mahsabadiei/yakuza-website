@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import MuxVideo from "@mux/mux-video-react";
 import MuxAudio from "@mux/mux-audio-react";
 import { motion } from "framer-motion";
@@ -16,8 +17,31 @@ import gitbookIcon from "@/public/gitbook-icon.svg";
 import dextoolsIcon from "@/public/dextools-icon.svg";
 import humanHeadMobileDarkMode from "@/public/human-head-mobile-dark-mode.webp";
 import humanHeadMobileLightMode from "@/public/human-head-mobile-light-mode.webp";
+import { useThemeDetector } from "@/app/shared/hooks/useThemeDetector";
 
 export default function Home() {
+  const videoEl = useRef(null);
+  const videoElLight = useRef(null);
+  const isDarkTheme = useThemeDetector();
+
+  const attemptPlay = () => {
+    if (isDarkTheme) {
+    //@ts-ignore
+      videoEl?.current?.play().catch((error) => {
+        // console.error("Error attempting to play dark theme video", error);
+      });
+    } else {
+      //@ts-ignore
+      videoElLight?.current?.play().catch((error) => {
+        // console.error("Error attempting to play light theme video", error);
+      });
+    }
+  };
+
+  useEffect(() => {
+    attemptPlay();
+  }, [isDarkTheme]);
+
   return (
     <FramerMotionWrapper>
       <motion.section
@@ -128,10 +152,11 @@ export default function Home() {
           streamType="on-demand"
           // minResolution="1080p"
           // type="video/mp4"
-          style={{ aspectRatio: 16 / 9 }}
-          autoPlay
+          // autoPlay
+          playsInline
           loop
           muted
+          ref={videoEl}
         />
 
         <MuxVideo
@@ -145,10 +170,11 @@ export default function Home() {
           streamType="on-demand"
           // minResolution="1080p"
           // type="video/mp4"
-          style={{ aspectRatio: 16 / 9 }}
-          autoPlay
+          // autoPlay
+          playsInline
           loop
           muted
+          ref={videoElLight}
         />
 
         {/* <Image
@@ -158,6 +184,8 @@ export default function Home() {
           priority
           quality={100}
           sizes="100vw"
+          width={320}
+          height={400}
         />
 
         <Image
@@ -172,9 +200,9 @@ export default function Home() {
         {/* <MuxAudio
           playbackId="opW9kK8zfWdV01YLCGrQoXzJyR029Eg2RLYOlZ6Tt1B300"
           metadata={{
-            video_id: "audio-id-123456",
-            video_title: "Super Interesting Audio",
-            viewer_user_id: "user-id-bc-789",
+            video_id: "audio-id",
+            video_title: "Yakuza Audio",
+            viewer_user_id: "user-id",
           }}
           streamType="on-demand"
           controls
