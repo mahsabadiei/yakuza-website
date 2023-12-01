@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mux/mux-audio-react": "^0.7.0",
     "@mux/mux-video-react": "^0.8.0",
     "framer-motion": "^10.16.5",
     "next": "14.0.1",

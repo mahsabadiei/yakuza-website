@@ -114,6 +114,14 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@mux/mux-audio-react@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@mux/mux-audio-react/-/mux-audio-react-0.7.0.tgz#62db70f18fd02c3ebcc66329670b2edb4d55e52b"
+  integrity sha512-Ge6yIZnTo7VgLYHSg6o4qnL0w9gUe7rdr1mo1ExeIZNN1LPxBGgvIiJ/MzG6gtUOuWTVzTU4NgQm/Bt7eYgbJQ==
+  dependencies:
+    "@mux/playback-core" "0.21.0"
+    prop-types "^15.7.2"
+
 "@mux/mux-video-react@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@mux/mux-video-react/-/mux-video-react-0.8.0.tgz#00863526047d7e7ff125581c7675431284da8682"
