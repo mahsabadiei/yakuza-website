@@ -120,7 +120,7 @@ export default function Home() {
         </div>
 
         <MuxVideo
-          className="hidden dark:flex object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="hidden dark:flex object-cover min-w-[100%] min-h-[428px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           // playbackId="O00m6PEzRy7tWwc1xU2mSZH005dZTA8AgVGmp700WnBj02s"
           src="https://stream.mux.com/O00m6PEzRy7tWwc1xU2mSZH005dZTA8AgVGmp700WnBj02s/high.mp4"
           metadata={{
@@ -138,7 +138,7 @@ export default function Home() {
         />
 
         <MuxVideo
-          className="flex dark:hidden object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="flex dark:hidden object-cover min-w-[100%] min-h-[428px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           // playbackId="qeQyJfIuCLS3CjUSCTLI012wxnLSsbb4YywUCisWaZb00"
           src="https://stream.mux.com/qeQyJfIuCLS3CjUSCTLI012wxnLSsbb4YywUCisWaZb00/high.mp4"
           metadata={{
