@@ -3,11 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import MuxVideo from "@mux/mux-video-react";
-// import MuxAudio from "@mux/mux-audio-react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { sunrise } from "@/app/styles/fonts";
 import Header from "./header";
+import { useThemeDetector } from "@/app/shared/hooks/useThemeDetector";
 import xIcon from "@/public/x-icon.svg";
 import youtubeIcon from "@/public/youtube-icon.svg";
 import coinmarketcapIcon from "@/public/coinmarketcap-icon.svg";
@@ -15,7 +15,6 @@ import coingeckoIcon from "@/public/coingecko-icon.svg";
 import discordIcon from "@/public/discord-icon.svg";
 import gitbookIcon from "@/public/gitbook-icon.svg";
 import dextoolsIcon from "@/public/dextools-icon.svg";
-import { useThemeDetector } from "@/app/shared/hooks/useThemeDetector";
 
 export default function Home() {
   const videoEl = useRef(null);
@@ -154,19 +153,6 @@ export default function Home() {
           muted
           ref={videoElLight}
         />
-
-        {/* <MuxAudio
-          playbackId="opW9kK8zfWdV01YLCGrQoXzJyR029Eg2RLYOlZ6Tt1B300"
-          metadata={{
-            video_id: "audio-id",
-            video_title: "Yakuza Audio",
-            viewer_user_id: "user-id",
-          }}
-          streamType="on-demand"
-          controls
-          autoPlay
-          className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] p-[14px] sm:p-[18px] rounded-[48px] bg-black-gradient-0.5 dark:bg-gray-gradient-0.1 hover:border hover:border-gray-gradient-0.3"
-        /> */}
       </motion.section>
     </FramerMotionWrapper>
   );

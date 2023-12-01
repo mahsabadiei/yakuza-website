@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
+// import MuxAudio from "@mux/mux-audio-react";
 import { baiJamjuree } from "@/app/styles/fonts";
 import logo from "@/public/yakuza-logo.svg";
 import unmuteIcon from "@/public/unmute-icon.svg";
@@ -9,6 +10,7 @@ import muteIcon from "@/public/mute-icon.svg";
 import xIcon from "@/public/x-icon.svg";
 
 export default function Header() {
+  // const audioEl = useRef(null);
   const [mute, setMute] = useState(true);
   const [audio, setAudio] = useState(new Audio("./Yakuza(Downtempo).mp3"));
   const { data: session } = useSession();
@@ -83,6 +85,17 @@ export default function Header() {
             )}
           </div>
         </div>
+
+        {/* <MuxAudio
+          playbackId="opW9kK8zfWdV01YLCGrQoXzJyR029Eg2RLYOlZ6Tt1B300"
+          metadata={{
+            video_id: "audio-id",
+            video_title: "Yakuza Audio",
+            viewer_user_id: "user-id",
+          }}
+          streamType="on-demand"
+          ref={audioEl}
+        /> */}
 
         <button
           className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] p-[14px] sm:p-[18px] rounded-[48px] bg-black-gradient-0.5 dark:bg-gray-gradient-0.1 hover:border hover:border-gray-gradient-0.3"
