@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import MuxVideo from "@mux/mux-video-react";
-import MuxAudio from "@mux/mux-audio-react";
+// import MuxAudio from "@mux/mux-audio-react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { sunrise } from "@/app/styles/fonts";
@@ -15,8 +15,6 @@ import coingeckoIcon from "@/public/coingecko-icon.svg";
 import discordIcon from "@/public/discord-icon.svg";
 import gitbookIcon from "@/public/gitbook-icon.svg";
 import dextoolsIcon from "@/public/dextools-icon.svg";
-import humanHeadMobileDarkMode from "@/public/human-head-mobile-dark-mode.webp";
-import humanHeadMobileLightMode from "@/public/human-head-mobile-light-mode.webp";
 import { useThemeDetector } from "@/app/shared/hooks/useThemeDetector";
 
 export default function Home() {
@@ -26,7 +24,7 @@ export default function Home() {
 
   const attemptPlay = () => {
     if (isDarkTheme) {
-    //@ts-ignore
+      //@ts-ignore
       videoEl?.current?.play().catch((error) => {
         // console.error("Error attempting to play dark theme video", error);
       });
@@ -121,37 +119,17 @@ export default function Home() {
           </span>
         </div>
 
-        {/* <video
-          autoPlay
-          loop
-          muted
-          className="hidden dark:flex object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
-        >
-          <source src="./human-head.mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        <video
-          autoPlay
-          loop
-          muted
-          className="flex dark:hidden object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
-        >
-          <source src="./human-head-light.mp4" />
-          Your browser does not support the video tag.
-        </video> */}
-
         <MuxVideo
           className="hidden dark:flex object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
-          playbackId="O00m6PEzRy7tWwc1xU2mSZH005dZTA8AgVGmp700WnBj02s"
+          // playbackId="O00m6PEzRy7tWwc1xU2mSZH005dZTA8AgVGmp700WnBj02s"
+          src="https://stream.mux.com/O00m6PEzRy7tWwc1xU2mSZH005dZTA8AgVGmp700WnBj02s/high.mp4"
           metadata={{
             video_id: "video-id",
             video_title: "Human Head dark mode",
             viewer_user_id: "user-id",
           }}
           streamType="on-demand"
-          // minResolution="1080p"
-          // type="video/mp4"
+          type="video/mp4"
           // autoPlay
           playsInline
           loop
@@ -161,41 +139,21 @@ export default function Home() {
 
         <MuxVideo
           className="flex dark:hidden object-cover min-w-[100%] min-h-[100%] fixed right-0 bottom-0 -z-10"
-          playbackId="qeQyJfIuCLS3CjUSCTLI012wxnLSsbb4YywUCisWaZb00"
+          // playbackId="qeQyJfIuCLS3CjUSCTLI012wxnLSsbb4YywUCisWaZb00"
+          src="https://stream.mux.com/qeQyJfIuCLS3CjUSCTLI012wxnLSsbb4YywUCisWaZb00/high.mp4"
           metadata={{
             video_id: "video-id",
             video_title: "Human Head light mode",
             viewer_user_id: "user-id",
           }}
           streamType="on-demand"
-          // minResolution="1080p"
-          // type="video/mp4"
+          type="video/mp4"
           // autoPlay
           playsInline
           loop
           muted
           ref={videoElLight}
         />
-
-        {/* <Image
-          src={humanHeadMobileDarkMode}
-          alt="humanHeadMobileDarkMode"
-          className="flex sm:hidden object-cover fixed right-0 bottom-0 -z-10"
-          priority
-          quality={100}
-          sizes="100vw"
-          width={320}
-          height={400}
-        />
-
-        <Image
-          src={humanHeadMobileLightMode}
-          alt="humanHeadMobileLightMode"
-          className="flex sm:hidden dark:hidden object-cover fixed right-0 bottom-0 -z-10"
-          priority
-          quality={100}
-          sizes="100vw"
-        /> */}
 
         {/* <MuxAudio
           playbackId="opW9kK8zfWdV01YLCGrQoXzJyR029Eg2RLYOlZ6Tt1B300"

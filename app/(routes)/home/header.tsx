@@ -47,8 +47,8 @@ export default function Header() {
                 </div>
 
                 <button
-                  onClick={() => signIn()}
                   className="flex w-[84px] h-[29px] justify-center items-center px-5 py-1.5 rounded-3xl bg-black dark:bg-white hover:bg-gray-light"
+                  onClick={() => signIn()}
                 >
                   <p className="text-xs font-bold leading-4 text-white dark:text-black">
                     Connect
@@ -72,8 +72,8 @@ export default function Header() {
                 </div>
 
                 <button
-                  onClick={() => signOut()}
                   className="flex w-[84px] h-[29px] justify-center items-center px-5 py-1.5 rounded-3xl bg-black dark:bg-white hover:bg-gray-light"
+                  onClick={() => signOut()}
                 >
                   <p className="text-xs font-bold leading-4 text-white dark:text-black">
                     Disconnect
@@ -119,8 +119,8 @@ export default function Header() {
               </div>
 
               <button
-                onClick={() => signIn()}
                 className="flex w-[99px] h-[34px] justify-center items-center px-6 py-1.5 rounded-[32px] bg-black dark:bg-white hover:bg-gray-light"
+                onClick={() => signIn()}
               >
                 <p className="text-xs font-bold leading-[22px] text-white dark:text-black">
                   Connect
@@ -144,8 +144,8 @@ export default function Header() {
               </div>
 
               <button
-                onClick={() => signOut()}
                 className="flex w-[99px] h-[34px] justify-center items-center px-6 py-1.5 rounded-[32px] bg-black dark:bg-white hover:bg-gray-light"
+                onClick={() => signOut()}
               >
                 <p className="text-xs font-bold leading-[22px] text-white dark:text-black">
                   Disconnect

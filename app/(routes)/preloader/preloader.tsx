@@ -28,7 +28,8 @@ export default function Preloader() {
               transition: { duration: 5, delay: 2 },
             },
             end: {
-              scale: 20,
+              width: 536,
+              height: 536,
               transition: { duration: 3, delay: 8 },
             },
           }}
