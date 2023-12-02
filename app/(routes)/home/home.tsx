@@ -178,13 +178,13 @@ export default function Home() {
         <video
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           muted
-          // autoPlay
+          autoPlay
           loop
           playsInline
           // preload="auto"
           ref={videoEl}
         >
-          <source src="https://res.cloudinary.com/dsxvbxbq3/video/upload/v1701421119/samples/sea-turtle.mp4" type="video/webm" />
+          <source src="./human-head.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </motion.section>
