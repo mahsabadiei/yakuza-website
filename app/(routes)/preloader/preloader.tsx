@@ -13,7 +13,7 @@ export default function Preloader() {
     const interval = setInterval(() => {
       setIsLoading(false);
       clearInterval(interval);
-    }, 8000);
+    }, 10000);
   }, []);
 
   return isLoading ? (
@@ -26,12 +26,12 @@ export default function Preloader() {
             start: {
               opacity: [0, 1],
               x: 0,
-              y: 300,
-              transition: { duration: 4, delay: 2 },
+              y: 360,
+              transition: { duration: 6, delay: 2 },
             },
             end: {
               opacity: [1, 0],
-              transition: { duration: 2, delay: 6 },
+              transition: { duration: 2, delay: 8 },
             },
           }}
           animate={["start", "end"]}
@@ -47,7 +47,7 @@ export default function Preloader() {
               },
               end: {
                 opacity: [1, 0],
-                transition: { duration: 2, delay: 6 },
+                transition: { duration: 2, delay: 8 },
               },
             }}
             animate={["start", "end"]}
@@ -62,7 +62,7 @@ export default function Preloader() {
               },
               end: {
                 opacity: [1, 0],
-                transition: { duration: 2, delay: 6 },
+                transition: { duration: 2, delay: 8 },
               },
             }}
             animate={["start", "end"]}
@@ -77,7 +77,7 @@ export default function Preloader() {
               },
               end: {
                 opacity: [1, 0],
-                transition: { duration: 2, delay: 6 },
+                transition: { duration: 2, delay: 8 },
               },
             }}
             animate={["start", "end"]}
@@ -90,12 +90,12 @@ export default function Preloader() {
             start: {
               opacity: [0, 1],
               x: 0,
-              y: -300,
-              transition: { duration: 4, delay: 2 },
+              y: -360,
+              transition: { duration: 6, delay: 2 },
             },
             end: {
               opacity: [1, 0],
-              transition: { duration: 2, delay: 6 },
+              transition: { duration: 2, delay: 8 },
             },
           }}
           animate={["start", "end"]}

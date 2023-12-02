@@ -192,33 +192,19 @@ export default function Home() {
           ref={videoEl}
         /> */}
 
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `
         <video
-          loop
-          muted
-          autoplay
-          playsinline
-          src="./human-head.webm"
-          class="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
-        />,
-      `,
-          }}
-        ></div>
-
-        {/* <video
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           autoPlay
           playsInline
           loop
           muted
+          controls
           // preload="auto"
           // ref={videoEl}
         >
           <source src="./human-head.webm" type="video/webm" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>
       </motion.section>
     </FramerMotionWrapper>
   );
