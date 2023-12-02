@@ -176,7 +176,7 @@ export default function Home() {
           </div>
         </div>
 
-        <MuxVideo
+        {/* <MuxVideo
           className="hidden dark:flex object-cover min-w-[100%] min-h-[428px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           src="./human-head.webm"
           metadata={{
@@ -190,7 +190,22 @@ export default function Home() {
           loop
           muted
           ref={videoEl}
-        />
+        /> */}
+
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="./human-head.webm"
+          class="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+        />,
+      `,
+          }}
+        ></div>
 
         {/* <video
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
@@ -198,7 +213,7 @@ export default function Home() {
           playsInline
           loop
           muted
-          preload="auto"
+          // preload="auto"
           // ref={videoEl}
         >
           <source src="./human-head.webm" type="video/webm" />
