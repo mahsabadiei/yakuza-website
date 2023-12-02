@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import MuxVideo from "@mux/mux-video-react";
+import ReactPlayer from "react-player";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
@@ -176,30 +176,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* <MuxVideo
-          className="hidden dark:flex object-cover min-w-[100%] min-h-[428px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
-          src="./human-head.webm"
-          metadata={{
-            video_id: "video-id",
-            video_title: "Human Head dark mode",
-            viewer_user_id: "user-id",
-          }}
-          streamType="on-demand"
-          // autoPlay
-          playsInline
-          loop
-          muted
-          ref={videoEl}
-        /> */}
-
-        <video
+        <ReactPlayer
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
-          src="./human-head.mp4"
+          url={"./human-head.mp4"}
+          width="100%"
+          height="100%"
           muted
-          autoPlay
+          playing
+          playsinline
           loop
-          playsInline
-          preload="auto"
         />
 
         {/* <video
