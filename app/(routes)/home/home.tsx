@@ -181,10 +181,10 @@ export default function Home() {
           // autoPlay
           loop
           playsInline
-          preload="auto"
+          // preload="auto"
           ref={videoEl}
         >
-          <source src="./human-head.webm" type="video/webm" />
+          <source src="https://res.cloudinary.com/dsxvbxbq3/video/upload/v1701421119/samples/sea-turtle.mp4" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </motion.section>
