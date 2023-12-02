@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import MuxVideo from "@mux/mux-video-react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
@@ -176,7 +177,24 @@ export default function Home() {
           </div>
         </div>
 
-        <video
+        <MuxVideo
+          className="hidden dark:flex object-cover min-w-[100%] min-h-[428px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+          src="./human-head.mp4"
+          metadata={{
+            video_id: "video-id",
+            video_title: "Human Head dark mode",
+            viewer_user_id: "user-id",
+          }}
+          streamType="on-demand"
+          type="video/mp4"
+          // autoPlay
+          playsInline
+          loop
+          muted
+          ref={videoEl}
+        />
+
+        {/* <video
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           autoPlay
           playsInline
@@ -186,7 +204,7 @@ export default function Home() {
         >
           <source src="./human-head.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </motion.section>
     </FramerMotionWrapper>
   );
