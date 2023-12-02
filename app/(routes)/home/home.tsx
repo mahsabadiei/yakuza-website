@@ -193,12 +193,13 @@ export default function Home() {
         /> */}
 
         <video
-          className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0"
           muted
-          autoPlay
+          // autoPlay
           loop
           playsInline
           preload="auto"
+          controls
           // ref={videoEl}
         >
           <source src="./human-head.webm" type="video/webm" />
