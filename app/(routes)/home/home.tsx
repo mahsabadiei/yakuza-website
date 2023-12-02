@@ -120,8 +120,8 @@ export default function Home() {
 
         <MuxVideo
           className="hidden dark:flex object-cover min-w-[100%] min-h-[428px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
-          // playbackId="O00m6PEzRy7tWwc1xU2mSZH005dZTA8AgVGmp700WnBj02s"
-          src="https://stream.mux.com/O00m6PEzRy7tWwc1xU2mSZH005dZTA8AgVGmp700WnBj02s/high.mp4"
+          // playbackId="odZk401FC8DnnAnTz00GWnJNwGBlNbrWei2jiSebkbMdU"
+          src="https://stream.mux.com/odZk401FC8DnnAnTz00GWnJNwGBlNbrWei2jiSebkbMdU/high.mp4"
           metadata={{
             video_id: "video-id",
             video_title: "Human Head dark mode",
@@ -138,8 +138,8 @@ export default function Home() {
 
         <MuxVideo
           className="flex dark:hidden object-cover min-w-[100%] min-h-[428px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
-          // playbackId="qeQyJfIuCLS3CjUSCTLI012wxnLSsbb4YywUCisWaZb00"
-          src="https://stream.mux.com/qeQyJfIuCLS3CjUSCTLI012wxnLSsbb4YywUCisWaZb00/high.mp4"
+          // playbackId="TkLRCMFxQUpmeQw7NJjB2m5dcs02ByEEe3P1qoCbJv2Q"
+          src="https://stream.mux.com/TkLRCMFxQUpmeQw7NJjB2m5dcs02ByEEe3P1qoCbJv2Q/high.mp4"
           metadata={{
             video_id: "video-id",
             video_title: "Human Head light mode",

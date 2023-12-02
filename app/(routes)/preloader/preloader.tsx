@@ -1,8 +1,10 @@
 "use client";
+import dynamic from 'next/dynamic'
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Home from "../home/home";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
+
+const Home = dynamic(() => import('../home/home'))
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
