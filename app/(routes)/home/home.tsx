@@ -199,9 +199,11 @@ export default function Home() {
           loop
           playsInline
           preload="auto"
+          width="100%"
+          height="100%"
           // ref={videoEl}
         >
-          <source src="./human-head.webm" type="video/webm" />
+          <source src="./human-head.webm"  />
           Your browser does not support the video tag.
         </video>
       </motion.section>
