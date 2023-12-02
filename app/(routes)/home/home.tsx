@@ -196,12 +196,12 @@ export default function Home() {
 
         <video
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
-          // autoPlay
+          autoPlay
           playsInline
           loop
           muted
           preload="auto"
-          ref={videoEl}
+          // ref={videoEl}
         >
           <source src="./human-head.webm" type="video/webm" />
           Your browser does not support the video tag.
