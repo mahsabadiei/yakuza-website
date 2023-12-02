@@ -37,7 +37,6 @@ export default function Home() {
         className="flex min-h-screen flex-col items-center px-4 sm:px-8 overflow-x-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.7, ease: "circOut" } }}
-        exit={{ opacity: 1, transition: { duration: 0.7, ease: "circIn" } }}
       >
         <Header />
 
@@ -177,24 +176,23 @@ export default function Home() {
           </div>
         </div>
 
-        {/* <MuxVideo
+        <MuxVideo
           className="hidden dark:flex object-cover min-w-[100%] min-h-[428px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
-          src="./human-head.mp4"
+          src="./human-head.webm"
           metadata={{
             video_id: "video-id",
             video_title: "Human Head dark mode",
             viewer_user_id: "user-id",
           }}
           streamType="on-demand"
-          type="video/mp4"
           // autoPlay
           playsInline
           loop
           muted
           ref={videoEl}
-        /> */}
+        />
 
-        <video
+        {/* <video
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           autoPlay
           playsInline
@@ -205,7 +203,7 @@ export default function Home() {
         >
           <source src="./human-head.webm" type="video/webm" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </motion.section>
     </FramerMotionWrapper>
   );
