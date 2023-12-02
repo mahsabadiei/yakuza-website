@@ -194,6 +194,16 @@ export default function Home() {
 
         <video
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+          src="./human-head.mp4"
+          muted
+          autoPlay
+          loop
+          playsInline
+          preload="auto"
+        />
+
+        {/* <video
+          className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           muted
           autoPlay
           loop
@@ -203,7 +213,7 @@ export default function Home() {
         >
           <source src="./human-head.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </motion.section>
     </FramerMotionWrapper>
   );
