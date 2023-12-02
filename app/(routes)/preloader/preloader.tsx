@@ -13,7 +13,7 @@ export default function Preloader() {
     const interval = setInterval(() => {
       setIsLoading(false);
       clearInterval(interval);
-    }, 10000);
+    }, 8000);
   }, []);
 
   return isLoading ? (
@@ -27,12 +27,11 @@ export default function Preloader() {
               opacity: [0, 1],
               x: 0,
               y: 300,
-              transition: { duration: 5, delay: 2 },
+              transition: { duration: 4, delay: 2 },
             },
             end: {
-              width: 536,
-              height: 536,
-              transition: { duration: 3, delay: 8 },
+              opacity: [1, 0],
+              transition: { duration: 2, delay: 6 },
             },
           }}
           animate={["start", "end"]}
@@ -48,7 +47,7 @@ export default function Preloader() {
               },
               end: {
                 opacity: [1, 0],
-                transition: { duration: 1, delay: 7 },
+                transition: { duration: 2, delay: 6 },
               },
             }}
             animate={["start", "end"]}
@@ -63,7 +62,7 @@ export default function Preloader() {
               },
               end: {
                 opacity: [1, 0],
-                transition: { duration: 1, delay: 7 },
+                transition: { duration: 2, delay: 6 },
               },
             }}
             animate={["start", "end"]}
@@ -78,7 +77,7 @@ export default function Preloader() {
               },
               end: {
                 opacity: [1, 0],
-                transition: { duration: 1, delay: 7 },
+                transition: { duration: 2, delay: 6 },
               },
             }}
             animate={["start", "end"]}
@@ -92,11 +91,11 @@ export default function Preloader() {
               opacity: [0, 1],
               x: 0,
               y: -300,
-              transition: { duration: 5, delay: 2 },
+              transition: { duration: 4, delay: 2 },
             },
             end: {
               opacity: [1, 0],
-              transition: { duration: 1, delay: 7 },
+              transition: { duration: 2, delay: 6 },
             },
           }}
           animate={["start", "end"]}
