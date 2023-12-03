@@ -1,10 +1,10 @@
 "use client";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 
-const Home = dynamic(() => import('../home/home'))
+const Home = dynamic(() => import("../home/home"));
 
 export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +26,7 @@ export default function Preloader() {
             start: {
               opacity: [0, 1],
               x: 0,
-              y: 300,
+              y: window.innerHeight - (window.innerHeight / 2 + 74),
               transition: { duration: 6, delay: 2 },
             },
             end: {
@@ -90,7 +90,7 @@ export default function Preloader() {
             start: {
               opacity: [0, 1],
               x: 0,
-              y: -300,
+              y: -(window.innerHeight - (window.innerHeight / 2 + 74)),
               transition: { duration: 6, delay: 2 },
             },
             end: {
