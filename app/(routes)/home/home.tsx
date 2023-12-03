@@ -177,7 +177,7 @@ export default function Home() {
         </div>
 
         <Image
-          className="flex sm:hidden object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="flex sm:hidden object-cover min-w-[100%] min-h-[628px] fixed right-0 bottom-0 -z-10"
           src={humanHeadGif}
           alt="humanHeadGif"
           priority
@@ -188,14 +188,14 @@ export default function Home() {
         />
 
         <video
-          className="hidden sm:flex object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="hidden sm:flex object-cover min-w-[100%] min-h-[100%] lg:min-w-[80%] lg:max-h-[100%] xl:min-h-[100%] m-auto fixed bottom-0 -z-10"
           muted
           // autoPlay
           loop
           playsInline
           ref={videoEl}
         >
-          <source src="./human-head.mp4" type="video/mp4"  />
+          <source src="./human-head.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </motion.section>
