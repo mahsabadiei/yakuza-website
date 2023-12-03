@@ -183,6 +183,7 @@ export default function Home() {
           alt="humanHeadGif"
           priority
           fill
+          unoptimized
         />
 
         {/* <video
