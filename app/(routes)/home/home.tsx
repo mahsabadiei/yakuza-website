@@ -175,7 +175,15 @@ export default function Home() {
           </div>
         </div>
 
-        <video
+        <Image
+          className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+          src={"./human-head.gif"}
+          alt="human-head"
+          priority
+          fill
+        />
+
+        {/* <video
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           muted
           autoPlay
@@ -183,9 +191,9 @@ export default function Home() {
           playsInline
           // ref={videoEl}
         >
-          <source src="./human-head.mp4" type="video/mp4" />
+          <source src="./human-head.gif"  />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </motion.section>
     </FramerMotionWrapper>
   );
