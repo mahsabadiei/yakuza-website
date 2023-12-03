@@ -14,6 +14,8 @@ import coingeckoIcon from "@/public/coingecko-icon.svg";
 import discordIcon from "@/public/discord-icon.svg";
 import gitbookIcon from "@/public/gitbook-icon.svg";
 import dextoolsIcon from "@/public/dextools-icon.svg";
+import humanHeadGif from "@/public/human-head.gif";
+
 
 export default function Home() {
   const videoEl = useRef(null);
@@ -177,8 +179,8 @@ export default function Home() {
 
         <Image
           className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
-          src={"./human-head.gif"}
-          alt="human-head"
+          src={humanHeadGif}
+          alt="humanHeadGif"
           priority
           fill
         />
