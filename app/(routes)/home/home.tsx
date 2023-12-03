@@ -17,7 +17,19 @@ import dextoolsIcon from "@/public/dextools-icon.svg";
 import humanHeadGif from "@/public/human-head.gif";
 
 export default function Home() {
+  const videoEl = useRef(null);
   const { data: session } = useSession();
+
+  const attemptPlay = () => {
+    //@ts-ignore
+    videoEl?.current?.play().catch((error) => {
+      // console.error("Error attempting to play video", error);
+    });
+  };
+
+  useEffect(() => {
+    attemptPlay();
+  }, []);
 
   return (
     <FramerMotionWrapper>
@@ -165,7 +177,7 @@ export default function Home() {
         </div>
 
         <Image
-          className="object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+          className="flex sm:hidden object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
           src={humanHeadGif}
           alt="humanHeadGif"
           priority
@@ -174,6 +186,18 @@ export default function Home() {
           quality={100}
           sizes="100vw"
         />
+
+        <video
+          className="hidden sm:flex object-cover min-w-[100%] min-h-[628px] sm:min-h-[100%] fixed right-0 bottom-0 -z-10"
+          muted
+          // autoPlay
+          loop
+          playsInline
+          ref={videoEl}
+        >
+          <source src="./human-head.mp4" type="video/mp4"  />
+          Your browser does not support the video tag.
+        </video>
       </motion.section>
     </FramerMotionWrapper>
   );
