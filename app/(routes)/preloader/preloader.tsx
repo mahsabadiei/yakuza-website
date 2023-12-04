@@ -18,26 +18,9 @@ export default function Preloader() {
 
   return isLoading ? (
     <FramerMotionWrapper>
-      <section className="flex flex-col w-full min-h-screen justify-center items-center">
+      <section className="flex flex-col w-full min-h-screen justify-center items-center overflow-hidden">
         <motion.div
-          className="flex sm:hidden w-[36px] h-[36px] border-[5.5px] border-red rounded-full"
-          initial={{ y: -100 }}
-          variants={{
-            start: {
-              opacity: [0, 1],
-              x: 0,
-              y: screen.height - (screen.height / 2 + 74),
-              transition: { duration: 6, delay: 2 },
-            },
-            end: {
-              opacity: [1, 0],
-              transition: { duration: 2, delay: 8 },
-            },
-          }}
-          animate={["start", "end"]}
-        />
-        <motion.div
-          className="hidden sm:flex w-[36px] h-[36px] border-[5.5px] border-red rounded-full"
+          className="w-[36px] h-[36px] border-[5.5px] border-red rounded-full"
           initial={{ y: -100 }}
           variants={{
             start: {
