@@ -2,7 +2,7 @@ import Preloader from "./(routes)/preloader/preloader";
 
 export default function Page() {
   return (
-    <main>
+    <main className="h-screen">
       <Preloader />
     </main>
   );
