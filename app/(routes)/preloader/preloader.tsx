@@ -1,26 +1,31 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 
 const Home = dynamic(() => import("../home/home"));
 
 export default function Preloader() {
-  const [isLoading, setIsLoading] = useState(true);
+  const heightRef = useRef(null);
   const [height, setHeight] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setHeight(window.innerHeight);
-    const interval = setInterval(() => {
-      setIsLoading(false);
-      clearInterval(interval);
-    }, 8000);
+    //@ts-ignore
+    setHeight(heightRef?.current?.clientHeight);
+    // const interval = setInterval(() => {
+    //   setIsLoading(false);
+    //   clearInterval(interval);
+    // }, 8000);
   }, []);
 
   return isLoading ? (
     <FramerMotionWrapper>
-      <section className="flex flex-col w-full min-h-screen justify-center items-center overflow-hidden">
+      <section
+        className="flex flex-col w-full min-h-screen justify-center items-center overflow-hidden"
+        ref={heightRef}
+      >
         <motion.div
           className="w-[24px] h-[24px] border-[3.78px] border-red rounded-full"
           initial={{ y: -100 }}
@@ -28,7 +33,7 @@ export default function Preloader() {
             start: {
               opacity: [0, 1],
               x: 0,
-              y: height - (height / 2 + 47),
+              y: height - (height / 2 + 108),
               transition: { duration: 4, delay: 1 },
             },
             end: {
@@ -92,7 +97,7 @@ export default function Preloader() {
             start: {
               opacity: [0, 1],
               x: 0,
-              y: -(height - (height / 2 + 47)),
+              y: -(height - (height / 2 + 108)),
               transition: { duration: 4, delay: 1 },
             },
             end: {
@@ -106,6 +111,17 @@ export default function Preloader() {
           <p className="text-2xl font-extralight">A</p>
           <p className="text-2xl font-extralight">K</p>
         </motion.div>
+        <motion.button
+          className="w-[247px] px-8 py-4 absolute m-auto rounded-[48px] bg-red"
+          onClick={() => setIsLoading(false)}
+          initial={{ scaleY: 0 }}
+          animate={{
+            scaleY: 1,
+            transition: { duration: 1, delay: 7 },
+          }}
+        >
+          <p className="text-xl font-bold text-white">Enter Yak universe</p>
+        </motion.button>
       </section>
     </FramerMotionWrapper>
   ) : (
