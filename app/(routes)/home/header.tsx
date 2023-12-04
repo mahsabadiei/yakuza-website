@@ -24,7 +24,7 @@ export default function Header() {
       </span>
 
       <button
-        className="w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] p-[14px] sm:p-[18px] rounded-[48px] bg-gray-gradient-0.1 hover:border hover:border-gray-gradient-0.3"
+        className="w-[48px] h-[48px] p-[14px] rounded-[48px] bg-gray-gradient-0.1 hover:border hover:border-gray-gradient-0.3"
         onClick={() => {
           setMute((v) => !v);
           mute ? audio.play() : audio.pause();

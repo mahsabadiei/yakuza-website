@@ -36,7 +36,7 @@ export default function Home() {
       <motion.section
         className="flex min-h-screen flex-col items-center px-4 sm:px-8 overflow-x-hidden"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.7, ease: "circOut" } }}
+        animate={{ opacity: 1, transition: { duration: 2, ease: "circOut" } }}
       >
         <Header />
 
@@ -147,31 +147,31 @@ export default function Home() {
 
           <div className="hidden md:flex flex-col">
             <span className={sunrise.className}>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">W</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">h</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">i</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">t</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">e</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">p</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">a</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">p</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">e</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">r</p>
+              <p className="text-base font-normal leading-5">W</p>
+              <p className="text-base font-normal leading-5">h</p>
+              <p className="text-base font-normal leading-5">i</p>
+              <p className="text-base font-normal leading-5">t</p>
+              <p className="text-base font-normal leading-5">e</p>
+              <p className="text-base font-normal leading-5">p</p>
+              <p className="text-base font-normal leading-5">a</p>
+              <p className="text-base font-normal leading-5">p</p>
+              <p className="text-base font-normal leading-5">e</p>
+              <p className="text-base font-normal leading-5">r</p>
             </span>
           </div>
 
           <div className="absolute right-4 bottom-11 md:hidden">
             <span className={sunrise.className}>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">W</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">h</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">i</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">t</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">e</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">p</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">a</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">p</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">e</p>
-              <p className="text-xl font-normal leading-5 sm:leading-6 ">r</p>
+              <p className="text-base font-normal leading-5">W</p>
+              <p className="text-base font-normal leading-5">h</p>
+              <p className="text-base font-normal leading-5">i</p>
+              <p className="text-base font-normal leading-5">t</p>
+              <p className="text-base font-normal leading-5">e</p>
+              <p className="text-base font-normal leading-5">p</p>
+              <p className="text-base font-normal leading-5">a</p>
+              <p className="text-base font-normal leading-5">p</p>
+              <p className="text-base font-normal leading-5">e</p>
+              <p className="text-base font-normal leading-5">r</p>
             </span>
           </div>
         </div>
