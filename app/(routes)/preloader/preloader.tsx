@@ -20,7 +20,7 @@ export default function Preloader() {
 
   return isLoading ? (
     <FramerMotionWrapper>
-      <section className="flex flex-col w-full h-screen justify-center items-center overflow-hidden">
+      <section className="flex flex-col w-full min-h-screen justify-center items-center overflow-hidden">
         <motion.div
           className="w-[24px] h-[24px] border-[3.78px] border-red rounded-full"
           initial={{ y: -100 }}

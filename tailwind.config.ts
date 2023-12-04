@@ -13,7 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      height: {
+      minHeight: {
         screen: "calc(var(--vh, 1vh) * 100)"
       },
       colors: {
