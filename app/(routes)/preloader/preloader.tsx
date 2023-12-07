@@ -27,7 +27,7 @@ export default function Preloader() {
         ref={heightRef}
       >
         <motion.div
-          className="w-[24px] h-[24px] border-[3.78px] border-red rounded-full"
+          className="w-[24px] h-[24px] border-[3.78px] border-red-brand rounded-full"
           initial={{ y: -100 }}
           variants={{
             start: {
@@ -45,7 +45,7 @@ export default function Preloader() {
         />
         <section className="flex flex-row w-full min-h-screen gap-[128px] justify-center items-center">
           <motion.div
-            className="min-w-[51px] min-h-[51px] border-[3.78px] border-red rounded-full"
+            className="min-w-[51px] min-h-[51px] border-[3.78px] border-red-brand rounded-full"
             variants={{
               start: {
                 x: 165,
@@ -60,7 +60,7 @@ export default function Preloader() {
             animate={["start", "end"]}
           />
           <motion.div
-            className="min-w-[51px] min-h-[51px] border-[3.78px] border-red rounded-full"
+            className="min-w-[51px] min-h-[51px] border-[3.78px] border-red-brand rounded-full"
             variants={{
               start: {
                 x: 0,
@@ -75,7 +75,7 @@ export default function Preloader() {
             animate={["start", "end"]}
           />
           <motion.div
-            className="min-w-[51px] min-h-[51px] border-[3.78px] border-red rounded-full"
+            className="min-w-[51px] min-h-[51px] border-[3.78px] border-red-brand rounded-full"
             variants={{
               start: {
                 x: -165,
@@ -112,7 +112,7 @@ export default function Preloader() {
           <p className="text-2xl font-extralight">K</p>
         </motion.div>
         <motion.button
-          className="w-[247px] px-8 py-4 absolute m-auto rounded-[48px] bg-red"
+          className="w-[263px] h-[64px] px-8 py-4 absolute m-auto rounded-[48px] bg-red-brand"
           onClick={() => setIsLoading(false)}
           initial={{ scaleY: 0 }}
           animate={{
@@ -120,7 +120,7 @@ export default function Preloader() {
             transition: { duration: 1, delay: 7 },
           }}
         >
-          <p className="text-xl font-bold text-white">Enter Yak universe</p>
+          <p className="text-xl font-bold text-white">入力</p>
         </motion.button>
       </section>
     </FramerMotionWrapper>

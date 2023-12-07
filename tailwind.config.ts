@@ -20,7 +20,7 @@ const config: Config = {
         "black-gradient-0.3": "rgba(0, 0, 0, 0.20)",
         "black-gradient-0.5": "rgba(0, 0, 0, 0.05)",
         "gray-light": "#DCDCDC",
-        red: "#FF0000",
+        "red-brand": "#FF0000",
       },
     },
   },
