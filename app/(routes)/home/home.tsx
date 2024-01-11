@@ -56,7 +56,7 @@ export default function Home() {
               </div>
 
               <button
-                className="fle w-[91px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
+                className="fle w-[110px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
                 onClick={() => signIn()}
               >
                 <p className="text-sm font-bold leading-4 text-black">
@@ -81,7 +81,7 @@ export default function Home() {
               </div>
 
               <button
-                className="fle w-[91px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
+                className="fle w-[110px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
                 onClick={() => signOut()}
               >
                 <p className="text-sm font-bold leading-4 text-black">

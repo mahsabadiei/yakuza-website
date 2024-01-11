@@ -36,10 +36,10 @@ export default function Preloader() {
               y: height - (height / 2 + 108),
               transition: { duration: 4, delay: 1 },
             },
-            end: {
-              opacity: [1, 0],
-              transition: { duration: 2, delay: 6 },
-            },
+            // end: {
+            //   opacity: [1, 0],
+            //   transition: { duration: 2, delay: 6 },
+            // },
           }}
           animate={["start", "end"]}
         />
@@ -52,10 +52,10 @@ export default function Preloader() {
                 y: 0,
                 transition: { duration: 1.6 },
               },
-              end: {
-                opacity: [1, 0],
-                transition: { duration: 2, delay: 6 },
-              },
+              // end: {
+              //   opacity: [1, 0],
+              //   transition: { duration: 2, delay: 6 },
+              // },
             }}
             animate={["start", "end"]}
           />
@@ -67,10 +67,10 @@ export default function Preloader() {
                 y: -22,
                 transition: { duration: 1.6 },
               },
-              end: {
-                opacity: [1, 0],
-                transition: { duration: 2, delay: 6 },
-              },
+              // end: {
+              //   opacity: [1, 0],
+              //   transition: { duration: 2, delay: 6 },
+              // },
             }}
             animate={["start", "end"]}
           />
@@ -82,10 +82,10 @@ export default function Preloader() {
                 y: 0,
                 transition: { duration: 1.6 },
               },
-              end: {
-                opacity: [1, 0],
-                transition: { duration: 2, delay: 6 },
-              },
+              // end: {
+              //   opacity: [1, 0],
+              //   transition: { duration: 2, delay: 6 },
+              // },
             }}
             animate={["start", "end"]}
           />
@@ -100,10 +100,10 @@ export default function Preloader() {
               y: -(height - (height / 2 + 108)),
               transition: { duration: 4, delay: 1 },
             },
-            end: {
-              opacity: [1, 0],
-              transition: { duration: 2, delay: 6 },
-            },
+            // end: {
+            //   opacity: [1, 0],
+            //   transition: { duration: 2, delay: 6 },
+            // },
           }}
           animate={["start", "end"]}
         >
@@ -114,11 +114,20 @@ export default function Preloader() {
         <motion.button
           className="w-[263px] h-[64px] px-8 py-4 absolute m-auto rounded-[48px] bg-red-brand"
           onClick={() => setIsLoading(false)}
-          initial={{ scaleY: 0 }}
-          animate={{
-            scaleY: 1,
-            transition: { duration: 1, delay: 7 },
+          initial={{ y: 500 }}
+          variants={{
+            start: {
+              opacity: [0, 1],
+              x: 0,
+              y: -(height - (height / 2 + 650)),
+              transition: { duration: 4, delay: 4 },
+            },
+            // end: {
+            //   opacity: [1, 0],
+            //   transition: { duration: 2, delay: 6 },
+            // },
           }}
+          animate={["start", "end"]}
         >
           <p className="text-xl font-bold text-white">入力</p>
         </motion.button>
