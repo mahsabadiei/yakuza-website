@@ -119,7 +119,7 @@ export default function Preloader() {
         </motion.div>
         <motion.button
           className="w-[263px] h-[64px] px-8 py-4 absolute m-auto rounded-[48px] bg-red-brand"
-          onClick={() => onEnterClick}
+          onClick={onEnterClick}
           initial={{ y: 500 }}
           variants={{
             start: {
