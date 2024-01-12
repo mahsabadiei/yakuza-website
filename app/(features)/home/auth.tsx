@@ -3,7 +3,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import xIcon from "@/public/x-icon.svg";
 
 export default function Auth() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
   return (
     <div className="flex flex-row min-w-[358px] h-[56px] sm:w-[468px] sm:h-[53px] items-center justify-between gap-2 pr-4 pl-6 py-4 sm:pr-3 sm:pl-4 sm:py-3 rounded-[48px] border border-gray-gradient-0.2">
@@ -23,9 +23,11 @@ export default function Auth() {
 
           <button
             className="flex w-[110px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
-            onClick={() => signIn("twitter", { callbackUrl: '/user' })}
+            onClick={() => signIn("twitter", { callbackUrl: "/user" })}
           >
-            <p className="text-sm font-bold leading-4 text-black">Connect</p>
+            <p className="text-sm font-bold leading-4 text-black">
+              {status === "loading" ? "loading" : "Connect"}
+            </p>
           </button>
         </>
       )}
@@ -46,7 +48,7 @@ export default function Auth() {
 
           <button
             className="flex w-[110px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
-            onClick={() => signOut({redirect: false})}
+            onClick={() => signOut({ redirect: false })}
           >
             <p className="text-sm font-bold leading-4 text-black">Disconnect</p>
           </button>
