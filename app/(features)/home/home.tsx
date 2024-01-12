@@ -2,11 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { signIn, signOut, useSession } from "next-auth/react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { sunrise } from "@/app/styles/fonts";
 import Header from "./header";
+import Auth from "./auth";
 import xIcon from "@/public/x-icon.svg";
 import youtubeIcon from "@/public/youtube-icon.svg";
 import coinmarketcapIcon from "@/public/coinmarketcap-icon.svg";
@@ -18,8 +18,7 @@ import humanHeadGif from "@/public/human-head.gif";
 
 export default function Home() {
   const videoEl = useRef(null);
-  const { data: session } = useSession();
-
+  
   const attemptPlay = () => {
     //@ts-ignore
     videoEl?.current?.play().catch((error) => {
@@ -40,57 +39,7 @@ export default function Home() {
       >
         <Header />
 
-        <div className="flex flex-row min-w-[358px] h-[56px] sm:w-[468px] sm:h-[53px] items-center justify-between gap-2 pr-4 pl-6 py-4 sm:pr-3 sm:pl-4 sm:py-3 rounded-[48px] border border-gray-gradient-0.2">
-          {!session && (
-            <>
-              <div className="flex flex-row items-center justify-center">
-                <Image
-                  src={xIcon}
-                  alt="xIcon"
-                  priority
-                  className="w-[20px] h-[20px]"
-                />
-                <p className="text-sm font-semibold leading-[18px] px-1">
-                  Connect X
-                </p>
-              </div>
-
-              <button
-                className="fle w-[110px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
-                onClick={() => signIn()}
-              >
-                <p className="text-sm font-bold leading-4 text-black">
-                  Connect
-                </p>
-              </button>
-            </>
-          )}
-
-          {session && (
-            <>
-              <div className="flex flex-row items-center justify-center">
-                <Image
-                  src={xIcon}
-                  alt="xIcon"
-                  priority
-                  className="w-[20px] h-[20px]"
-                />
-                <p className="text-sm font-semibold leading-[18px] px-1">
-                  {session.user?.name}
-                </p>
-              </div>
-
-              <button
-                className="fle w-[110px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
-                onClick={() => signOut()}
-              >
-                <p className="text-sm font-bold leading-4 text-black">
-                  Disconnect
-                </p>
-              </button>
-            </>
-          )}
-        </div>
+        <Auth />
 
         <div className="flex flex-col md:flex-row w-full items-center justify-between pt-6 md:pt-[18vh]">
           <div className="flex flex-row md:flex-col items-center justify-center gap-6">

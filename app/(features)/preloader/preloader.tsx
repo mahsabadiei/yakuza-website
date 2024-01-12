@@ -10,6 +10,7 @@ export default function Preloader() {
   const heightRef = useRef(null);
   const [height, setHeight] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const firstLoad = sessionStorage.getItem("firstLoad");
 
   useEffect(() => {
     //@ts-ignore
@@ -20,7 +21,12 @@ export default function Preloader() {
     // }, 8000);
   }, []);
 
-  return isLoading ? (
+  const onEnterClick = () => {
+    setIsLoading(false);
+    sessionStorage.setItem("firstLoad", "true");
+  };
+
+  return isLoading && !firstLoad ? (
     <FramerMotionWrapper>
       <section
         className="flex flex-col w-full min-h-screen justify-center items-center overflow-hidden"
@@ -113,7 +119,7 @@ export default function Preloader() {
         </motion.div>
         <motion.button
           className="w-[263px] h-[64px] px-8 py-4 absolute m-auto rounded-[48px] bg-red-brand"
-          onClick={() => setIsLoading(false)}
+          onClick={() => onEnterClick}
           initial={{ y: 500 }}
           variants={{
             start: {
