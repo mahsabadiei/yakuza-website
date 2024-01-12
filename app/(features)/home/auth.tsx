@@ -23,7 +23,7 @@ export default function Auth() {
 
           <button
             className="flex w-[110px] h-[33px] justify-center items-center px-4 py-2 rounded-3xl bg-white hover:bg-gray-light"
-            onClick={() => signIn()}
+            onClick={() => signIn("twitter")}
           >
             <p className="text-sm font-bold leading-4 text-black">Connect</p>
           </button>
