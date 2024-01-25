@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { NextAuthProvider } from "./providers";
+import { NextAuthProvider } from "./lib/auth/providers";
 import { inter } from "./styles/fonts";
 import "./styles/globals.css";
 
