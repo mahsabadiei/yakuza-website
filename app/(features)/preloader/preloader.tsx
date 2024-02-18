@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
+import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
 
 const Home = dynamic(() => import("../home/home"));
 

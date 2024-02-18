@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
+import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
 import { sunrise } from "@/app/styles/fonts";
 import Header from "./header";
 import Auth from "./auth";
@@ -18,7 +18,7 @@ import humanHeadGif from "@/public/human-head.gif";
 
 export default function Home() {
   const videoEl = useRef(null);
-  
+
   const attemptPlay = () => {
     //@ts-ignore
     videoEl?.current?.play().catch((error) => {

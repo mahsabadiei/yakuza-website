@@ -9,5 +9,25 @@ export const authConfig: NextAuthOptions = {
       version: "2.0",
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET
+  callbacks: {
+    async jwt({ token, user, account, profile }) {
+      if (account) {
+        token.accessToken = account.access_token;
+        token.refreshToken = account.refresh_token;
+      }
+      if (profile) {
+        //@ts-ignore
+        token.handle = profile.data.username;
+      }
+      return token;
+    },
+    async session({ session, token, user }) {
+      //@ts-ignore
+      session.accessToken = token.accessToken;
+      //@ts-ignore
+      session.user.handle = token.handle;
+      return session;
+    },
+  },
+  secret: process.env.NEXTAUTH_SECRET,
 };
