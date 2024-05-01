@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
-import xIcon from "@/public/x-icon.svg";
+import xIcon from "../../../public/x-icon.svg";
 
 export default function Auth() {
   const { data: session, status } = useSession();

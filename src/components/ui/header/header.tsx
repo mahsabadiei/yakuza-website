@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { baiJamjuree } from "@/app/styles/fonts";
-import logo from "@/public/yakuza-logo.svg";
-import unmuteIcon from "@/public/unmute-icon.svg";
-import muteIcon from "@/public/mute-icon.svg";
+import { baiJamjuree } from "@/styles/fonts";
+import logo from "../../../../public/yakuza-logo.svg";
+import unmuteIcon from "../../../../public/unmute-icon.svg";
+import muteIcon from "../../../../public/mute-icon.svg";
 
 export default function Header() {
   const audioRef = useRef(null);

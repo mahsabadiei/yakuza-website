@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { inter } from "./styles/fonts";
-import "./styles/globals.css";
-import { NextAuthProvider } from "./providers/session-provider";
+import { inter } from "../styles/fonts";
+import "../styles/globals.css";
+import { NextAuthProvider } from "@/providers/session-provider";
 
 export const metadata: Metadata = {
   title: "Yakuza's Legacy",

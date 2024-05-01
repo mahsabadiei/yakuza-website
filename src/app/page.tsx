@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const Preloader = dynamic(() => import("./(features)/preloader/preloader"), {
+const Preloader = dynamic(() => import("@/components/preloader/preloader"), {
   ssr: false,
 });
 

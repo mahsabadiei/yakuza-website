@@ -1,8 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Home = dynamic(() => import("../home/home"));
 
@@ -27,7 +26,7 @@ export default function Preloader() {
   };
 
   return isLoading && !firstLoad ? (
-    <FramerMotionWrapper>
+    <AnimatePresence>
       <section
         className="flex flex-col w-full min-h-screen justify-center items-center overflow-hidden"
         ref={heightRef}
@@ -138,7 +137,7 @@ export default function Preloader() {
           <p className="text-xl font-bold text-white">入力</p>
         </motion.button>
       </section>
-    </FramerMotionWrapper>
+    </AnimatePresence>
   ) : (
     <Home />
   );

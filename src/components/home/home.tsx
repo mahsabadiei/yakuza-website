@@ -2,19 +2,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
-import { sunrise } from "@/app/styles/fonts";
-import Header from "./header";
+import { AnimatePresence, motion } from "framer-motion";
+import { sunrise } from "@/styles/fonts";
+import Header from "../ui/header/header";
 import Auth from "./auth";
-import xIcon from "@/public/x-icon.svg";
-import youtubeIcon from "@/public/youtube-icon.svg";
-import coinmarketcapIcon from "@/public/coinmarketcap-icon.svg";
-import coingeckoIcon from "@/public/coingecko-icon.svg";
-import discordIcon from "@/public/discord-icon.svg";
-import gitbookIcon from "@/public/gitbook-icon.svg";
-import dextoolsIcon from "@/public/dextools-icon.svg";
-import humanHeadGif from "@/public/human-head.gif";
+import xIcon from "../../../public/x-icon.svg";
+import youtubeIcon from "../../../public/youtube-icon.svg";
+import coinmarketcapIcon from "../../../public/coinmarketcap-icon.svg";
+import coingeckoIcon from "../../../public/coingecko-icon.svg";
+import discordIcon from "../../../public/discord-icon.svg";
+import gitbookIcon from "../../../public/gitbook-icon.svg";
+import dextoolsIcon from "../../../public/dextools-icon.svg";
+import humanHeadGif from "../../../public/human-head.gif";
 
 export default function Home() {
   const videoEl = useRef(null);
@@ -31,7 +30,7 @@ export default function Home() {
   }, []);
 
   return (
-    <FramerMotionWrapper>
+    <AnimatePresence>
       <motion.section
         className="flex min-h-screen flex-col items-center px-4 sm:px-8 overflow-x-hidden"
         initial={{ opacity: 0 }}
@@ -148,6 +147,6 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
       </motion.section>
-    </FramerMotionWrapper>
+    </AnimatePresence>
   );
 }
