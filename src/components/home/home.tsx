@@ -2,18 +2,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { sunrise } from "@/styles/fonts";
-import Header from "../ui/header/header";
-import Auth from "./auth";
-import xIcon from "../../../public/x-icon.svg";
-import youtubeIcon from "../../../public/youtube-icon.svg";
-import coinmarketcapIcon from "../../../public/coinmarketcap-icon.svg";
-import coingeckoIcon from "../../../public/coingecko-icon.svg";
-import discordIcon from "../../../public/discord-icon.svg";
-import gitbookIcon from "../../../public/gitbook-icon.svg";
-import dextoolsIcon from "../../../public/dextools-icon.svg";
-import humanHeadGif from "../../../public/human-head.gif";
+import Header from "@/components/header/header";
+import Auth from "@/components/home/auth";
+import xIcon from "@/../public/x-icon.svg";
+import youtubeIcon from "@/../public/youtube-icon.svg";
+import coinmarketcapIcon from "@/../public/coinmarketcap-icon.svg";
+import coingeckoIcon from "@/../public/coingecko-icon.svg";
+import discordIcon from "@/../public/discord-icon.svg";
+import gitbookIcon from "@/../public/gitbook-icon.svg";
+import dextoolsIcon from "@/../public/dextools-icon.svg";
+import humanHeadGif from "@/../public/human-head.gif";
 
 export default function Home() {
   const videoEl = useRef(null);
